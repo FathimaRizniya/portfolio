@@ -1,0 +1,252 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #fceaff, #eaf7ff);
+  color: #222;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+
+.header {
+  background: linear-gradient(90deg, #6c63ff, #f107a3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: #ffff99;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.menu-btn {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 50px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  gap: 50px;
+}
+
+.about .profile {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 8px solid #6c63ff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.about .profile:hover {
+  transform: scale(1.05);
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-name {
+  font-size: 40px;
+  font-weight: 700;
+  color: #6c63ff;
+  margin-bottom: 10px;
+}
+
+.about-description {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.cv {
+  background: linear-gradient(45deg, #6c63ff, #f107a3);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cv:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(108, 99, 255, 0.4);
+}
+
+
+.skillsk, .education, .projects, .contact {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.skillsk h2, .education h2, .projects h2, .contact h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: #6c63ff;
+  font-weight: 600;
+  position: relative;
+}
+
+.skillsk h2::after, .education h2::after, .projects h2::after, .contact h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: #f107a3;
+  margin: 8px auto 0;
+  border-radius: 4px;
+}
+
+.skillsk ul li {
+  background: #f4f0ff;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 10px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.skillsk ul li:hover {
+  transform: translateX(5px);
+  background: #e9ddff;
+}
+
+.project-card {
+  background: #f4f0ff;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+  background: #e9ddff;
+}
+
+.project-image {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact p {
+  font-size: 16px;
+  margin: 8px 0;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+  
+  .about .profile {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .about-name {
+    font-size: 32px;
+  }
+  
+  .cv {
+    display: inline-block;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    background: linear-gradient(90deg, #6c63ff, #f107a3);
+    flex-direction: column;
+    width: 220px;
+    display: none;
+    padding: 20px;
+    border-radius: 15px 0 0 15px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}
