@@ -34,5 +34,11 @@ document.addEventListener("DOMContentLoaded", () => {
   menuBtn.addEventListener("click", () => {
     navLinks.classList.toggle("show");
   });
+
+  // Typewriter text
+  const typewriter = document.getElementById("typewriter");
+  typewriter.textContent = "Fathima Risniya";
 });
+
+
 
